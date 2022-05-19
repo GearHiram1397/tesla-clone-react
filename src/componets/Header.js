@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu';
@@ -9,8 +10,8 @@ function Header() {
     return (
         <Container>
 
-             <a href="#">
-                <img src="images/images/logo.svg" />
+             <a href="z#">
+                <img src="images/images/logo.svg" alt ="burger"/>
             </a>
 
             <MenuGroup>
@@ -63,6 +64,10 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 10;
+    @media (max-width: 768px) { 
+       
+
+    }
 `
 const MenuGroup = styled.div`
     display: flex;
@@ -71,6 +76,10 @@ const MenuGroup = styled.div`
         font-weight: 500;
         padding: 0 10px;
         cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `
 const RightMenu = styled.div`
@@ -81,17 +90,22 @@ const RightMenu = styled.div`
         text-transform: uppercase;
         padding-right: 10px;
         
+        @media (max-width: 768px) {
+        display: none;
+    }
     }
 `
 const MenuIconContainer = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
+    
 `
 
 const CloseContainer = styled.div`
     display: flex;
     justify-content: flex-end;
+    
 `
 
 
@@ -120,5 +134,7 @@ const BurgerNav = styled.div`
         }
 
     }
+
+    
 
 `

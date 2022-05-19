@@ -35,6 +35,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 768px) { 
+       width: 420px;
+    }
     
 
 `
@@ -48,6 +51,10 @@ const ButtonGroup = styled.div`
     display: flex;
     
     margin-bottom: 30px;
+    @media (max-width: 768px) { 
+       flex-direction: column;
+
+    }
 `
 
 const LeftButton = styled.div`
@@ -64,6 +71,8 @@ const LeftButton = styled.div`
     opacity: 0.85;
     margin: 8px;
     cursor: pointer;
+
+  
 
 
 `
